@@ -1,0 +1,7 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* css */
+@import url(/src/styles/global.css);
+@import url(/src/styles/home.css);
+@import url(/src/styles/media-queries.css);

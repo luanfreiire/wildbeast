@@ -1,0 +1,84 @@
+/* css - media queries wildbeast */
+@media(width <=1000px) {
+    .layout-grid {
+        grid-template-areas:
+            "header header header"
+            "sidenav content content"
+            "sidenav anuncios anuncios"
+            "footer footer footer";
+    }
+}
+
+@media(width <=700px) {
+    .layout-grid {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "header"
+            "sidenav"
+            "content"
+            "anuncios"
+            "footer";
+    }
+
+    /* header */
+    .header {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
+    .header nav ul {
+        gap: 10px;
+    }
+
+    .header nav a {
+        font-size: 1rem;
+    }
+
+    /* sidenav */
+    .sidenav {
+        padding: 0px 30px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        position: relative;
+    }
+
+    .sidenav::after {
+        content: "→";
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0, 0, 0, 0.3);
+        animation: seta 0.5s ease-in 0s infinite alternate;
+    }
+
+    .sidenav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .sidenav ul li {
+        flex: 1 0 60px;
+    }
+
+    .sidenav ul a {
+        margin: 30px 30px 30px 0px;
+    }
+}
+
+@media (width <=600px) {
+    .content {
+        grid-template-columns: auto;
+    }
+}
+
+/* keyframes */
+@keyframes seta {
+    from {
+        right: 30px;
+    }
+
+    to {
+        right: 20px;
+    }
+}
